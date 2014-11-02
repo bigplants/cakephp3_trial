@@ -42,6 +42,5 @@ bash "create local db" do
   code <<-EOS
     mysql -u root --execute  "create database if not exists myapp"
     mysql -u root --execute  "create database if not exists myapp_test"
-    mysql -u root --execute  "create database if not exists myapp_bench"
   EOS
 end
