@@ -1,0 +1,29 @@
+.vagrant/*
+/build
+/Vendor
+/Plugin
+Berksfile
+Berksfile.lock
+/app/tmp/cache/*
+/app/tmp/logs/*
+/app/tmp/pear/*
+/app/tmp/sessions/*
+/app/tmp/tests/*
+/app/tmp/update_check/*
+/app/tmp/xprof/*
+/app/webroot/upload/*
+/app/Config/database_local.php
+/app/webroot/files
+.project
+.buildpath
+junit.xml
+.DS_Store
+# PhpStorm設定ファイルを除外
+# ただし、プロジェクト内で共通の設定を適用すべきファイルはバージョン管理対象にする
+/.idea/workspace.xml
+/.idea/dataSources.ids
+/.idea/vagrant.xml
+/.idea/inspectionProfiles
+!/.idea/inspectionProfiles/Project_Default.xml
+/.idea/dataSources.local.xml
+
