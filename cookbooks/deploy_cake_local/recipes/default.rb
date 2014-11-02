@@ -1,7 +1,23 @@
+# ディレクトリ作成
+directory "#{node[:app_root]}app/tmp" do
+  owner 'vagrant'
+  group 'vagrant'
+  mode 0777
+  action :create
+  not_if {::File.exists?("#{node[:app_root]}app/tmp")}
+end
+directory "#{node[:app_root]}app/logs" do
+  owner 'vagrant'
+  group 'vagrant'
+  mode 0777
+  action :create
+  not_if {::File.exists?("#{node[:app_root]}app/logs")}
+end
+
+
 bash "run cake console command" do
   code <<-EOS
     cd #{node[:app_root]}app; composer install
-    cp app.default.php app.php
   EOS
 end
 
